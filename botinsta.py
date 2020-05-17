@@ -9,7 +9,7 @@ class InstagramBot:
         self.username = username
         self.password = password
         self.driver = webdriver.Chrome(
-            executable_path=r'C:\Users\babil\Desktop\PROJETOS\BOT INSTAGRAM\chromedriver.exe')
+            executable_path=r'inserir o chrome driver')
 
     def login(self):
         driver = self.driver
@@ -25,7 +25,7 @@ class InstagramBot:
         password_elements.send_keys(self.password)
         password_elements.send_keys(Keys.RETURN)
         time.sleep(5)
-        self.curtirFotos('woman')
+        self.curtirFotos('tag')
 
 
     def curtirFotos(self, hashtag):
@@ -53,5 +53,5 @@ class InstagramBot:
 
 
 
-barbaraBot = InstagramBot('babilsa', '123barbara098')
-barbaraBot.login()
+pessoaBot = InstagramBot('user', 'senha')
+pessoaBot.login()
